@@ -538,12 +538,12 @@ const Gallery = () => {
         </div>
 
         {/* Pagination and Button */}
-        <div className="flex justify-center mt-10">
+        {/* <div className="flex justify-center mt-10">
           <Pagination />
         </div>
         <div className="flex justify-center mt-4">
           <Button />
-        </div>
+        </div> */}
       </div>
     </div>
   );
