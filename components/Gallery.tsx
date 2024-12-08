@@ -421,8 +421,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Pagination } from "@/components/ui/pagination";
-import { Button } from "@/components/ui/button";
 
 
 const Gallery = () => {
