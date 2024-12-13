@@ -1,106 +1,89 @@
 import React from 'react'
+import Link from "next/link"
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-wrap md:text-left text-center order-first">
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4 ">
-        {/* <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-          CATEGORIES
-        </h2>
-        <nav className="list-none mb-10">
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
-        </nav> */}
-
-        <p className='mt-4 text-[16px] text-[#9F9F9F]'>400 University Drive Suite 200 Coral Gables,<br/>
-        FL 33134 USA</p>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4  justify-evenly">
-        <h2 className="title-font font-medium text-[#9F9F9F] tracking-widest text-[16px] mb-3 pl-6">
-          Links
-        </h2>
-        <nav className="list-none mb-10 space-y-10">
-          <li>
-            <a className="text-[#000000] text-[16px] py-20 font-semibold pl-6">Home</a>
-          </li>
-          <li>
-            <a className="text-[#000000] text-[16px]  py-10 font-semibold pl-6">Shop</a>
-          </li>
-          <li>
-            <a className="text-[#000000] text-[16px]  py-10 font-semibold pl-6">About</a>
-          </li>
-          <li>
-            <a className="text-[#000000] text-[16px]  py-10 font-semibold pl-6">Contact</a>
-          </li>
-        </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-[#9F9F9F] tracking-widest text-[16px] mb-3">
-          Help
-        </h2>
-        <nav className="list-none mb-10 space-y-10">
-          <li>
-            <a className="text-[#000000] text-[16px]  py-10 font-semibold">Payment Options</a>
-          </li>
-          <li>
-            <a className="text-[#000000] text-[16px]  py-10 font-semibold">Returns</a>
-          </li>
-          <li>
-            <a className="text-[#000000] text-[16px]  py-10 font-semibold">Privacy policies</a>
-          </li>
-          
-        </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4 sm:flex-col ">
-        <h2 className="title-font font-medium text-[#9F9F9F] tracking-widest text-[16px] mb-3">
-         Newsletter
-        </h2>
-        <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start lg:flex-row ">
-          <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2 sm:flex-col sm:space-y-6 lg:flex ">
-            <input
-              type="text"
-              id="footer-field"
-              name="footer-field"
-              placeholder='Enter Your Email Address'
-              className='text-[#9F9F9F] border-b-black border-[1px] lg:flex'/>
-          <button className="lg:mt-2 xl:mt-0 sm:flex-col lg:inline-flex sm:block font-medium text-[#000000] border-b-black border-[1px]  ">
-            Subscribe
-          </button>
-          </div>
-        </div> 
+    <div className="bg-[#FFFFFF] py-10 px-6">
+    {/* Footer Content */}
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-screen-xl mx-auto">
+      {/* Address Section */}
+      <div className='m-auto'>
         
-        
-
-       
+        <p className="text-gray-600">400 University Drive Suite 200 Coral</p>
+        <p className="text-gray-600">Gables, FL 33134 USA</p>
       </div>
 
-      {/* bottom section
-       */}
-<div>
-      <p className='mt-40  text-16px text-[#000000]  sm:mx-auto'>2022 Meubel House. All rights reverved</p>
+      {/* Links Section */}
+      <div>
+        <h3 className="text-lg text-gray-500 font-semibold mb-4">Links</h3>
+        <ul className="space-y-8 text-lg">
+          <li className=''>
+            <Link href="/">
+              <p className="font-medium ">Home</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/shop">
+              <p className="font-medium ">Shop</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <p className="font-medium ">About</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact">
+              <p className="font-medium ">Contact</p>
+            </Link>
+          </li>
+        </ul>
       </div>
+
+      {/* Help Section */}
+      <div>
+        <h3 className="text-lg text-gray-500 font-semibold mb-4">Help</h3>
+        <ul className="space-y-8 text-lg">
+          <li>
+            <Link href="/payment-options">
+              <p className="font-medium ">Payment Options</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/returns">
+              <p className="font-medium ">Returns</p>
+            </Link>
+          </li>
+          <li>
+            <Link href="/privacy-policies">
+              <p className="font-medium ">Privacy Policies</p>
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Newsletter Section */}
+      <div>
+<h3 className="text-lg text-gray-500 font-semibold mb-4">Newsletter</h3>
+<div className="flex flex-wrap md:flex-nowrap gap-2">
+  <input
+    type="email"
+    placeholder="Enter Your Email Address"
+    className="font-medium flex-1 px-4 py-2 bg-gray-100 border-b-2 border-black focus:ring-2 focus:ring-black focus:outline-none"
+  />
+  <button className="px-6 py-2 font-medium  text-black border-b-2 border-black hover:no-underline">
+    Subscribe
+  </button>
+</div>
+</div>
     </div>
+
+    {/* Footer Bottom */}
+    <hr className="my-6 border-gray-300" />
+    <p className="sm:text-center text-gray-600 lg:text-left lg:pl-4">2022 Meubel House. All rights reserved.</p>
   </div>
-  
-
-  
-</footer>
-
-    </div>
-  )
+);
 }
+
 
 export default Footer

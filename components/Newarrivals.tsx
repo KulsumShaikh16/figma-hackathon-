@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from "next/link"
 
 const Newarrivals = () => {
   return (
@@ -28,10 +29,11 @@ const Newarrivals = () => {
       Asgaard sofa
       </p>
       <div className="flex justify-center">
+        <Link href="/singleproduct">
         <button className="inline-flex text-[#000000] lg:w-[255px] justify-center items-center  border-[1px] border-black py-2 px-6  rounded text-xl">
         Order Now
         </button>
-        
+        </Link>
       </div>
     </div>
   </div>

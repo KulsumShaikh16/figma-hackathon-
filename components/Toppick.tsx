@@ -1,135 +1,7 @@
-// import React from 'react'
-// import Image from 'next/image'
-
-// const Toppick = () => {
-//   return (
-//     <div>
-    
-//   <div className="container px-5 py-24 mx-auto bg-[#FFFFFF]">
-//     <div className="flex flex-col text-center w-full mb-20">
-//       <h2 className="text-[36px] text-[#000000] title-font font-medium title-font mb-1">
-//       Top Picks For You
-//       </h2>
-//       <p className="sm:text-[14px] text-[16px] font-medium  mb-4 text-[#9F9F9F]">
-//       Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.
-//       </p>
-     
-//     </div>
-//      {/* images card */}
-     
-//   <div className="container px-5  mx-auto ">
-//     <div className="flex  -m-4">
-//       <div className="p-4 md:w-1/3">
-//         <div className="h-full overflow-hidden">
-//           <Image
-//             className="lg:h-48 md:h-36 w-full object-cover object-center"
-//             src="/top1.svg"
-//             alt="blog"
-//             width={750}
-//             height={384.86}
-//           />
-//           <div className="p-6">
-            
-//             <h1 className="title-font text-[16px]  text-[#000000] mb-3">
-//             Trenton modular sofa_3
-//             </h1>
-//             <p className="leading-relaxed mb-3 text-[24px] font-medium ">
-//             Rs. 25,000.00
-//             </p>
-          
-//           </div>
-//         </div>
-//       </div>
-//       <div className="p-4 md:w-1/3 flex-wrap">
-//         <div className="h-full  overflow-hidden">
-//         <Image
-//             className="lg:h-48 md:h-36 w-full object-cover object-center"
-//             src="/top2.svg"
-//             alt="blog"
-//             width={255}
-//             height={184}
-//           />
-//           <div className="p-6">
-//           <h1 className="title-font text-[16px]  text-[#000000] mb-3">
-//           Granite dining table with dining chair
-//             </h1>
-//             <p className="leading-relaxed mb-3 text-[24px] font-medium ">
-//             Rs. 25,000.00
-//             </p>
-           
-//           </div>
-//         </div>
-//       </div>
-//       <div className="p-4 md:w-1/3">
-//         <div className="h-full overflow-hidden">
-//         <Image
-//             className="lg:h-48 md:h-36 w-full object-cover object-center"
-//             src="/top3.svg"
-//             alt="blog"
-//             width={250}
-//             height={376}
-//           />
-//           <div className="p-6">
-//           <h1 className="title-font text-[16px]  text-[#000000] mb-3">
-//           Outdoor bar table and stool
-//             </h1>
-//             <p className="leading-relaxed mb-3 text-[24px] font-medium ">
-//             Rs. 25,000.00
-//             </p>
-            
-//           </div>
-
-          
-//         </div>
-//       </div>
-
-
-
-//       <div className="p-4 md:w-1/3">
-//         <div className="h-full  overflow-hidden">
-//         <Image
-//             className="lg:h-48 md:h-36 w-full object-cover object-center"
-//             src="/top4.svg"
-//             alt="blog"
-//             width={250}
-//             height={376}
-//           />
-//           <div className="p-6">
-//           <h1 className="title-font text-[16px]  text-[#000000] mb-3">
-//           Plain console with teak mirror
-//             </h1>
-//             <p className="leading-relaxed mb-3 text-[24px] font-medium ">
-//             Rs. 25,000.00
-//             </p>
-            
-//           </div>
-
-          
-//         </div>
-//       </div>
-
-//     </div>
-  
-//     <div className="flex justify-center items-center ">
-//   <button className="flex justify-center items-center text-[#000000] border-b-black border-[2px] text-[20px] font-medium">
-//     View More
-//   </button>
-// </div>
-
-//   </div>
-
-//   </div>
-
-//     </div>
-//   )
-// }
-
-// export default Toppick
-
-
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 
 const Toppick = () => {
   return (
@@ -191,9 +63,11 @@ const Toppick = () => {
         </div>
 
         <div className="flex justify-center items-center mt-8">
-          <button className="flex justify-center items-center text-[#000000] border-b-black border-[2px] text-lg font-medium">
+          <Link href="/shop">
+          <button className="flex justify-center items-center text-[#000000] underline underline-offset-8 text-lg font-medium">
             View More
           </button>
+          </Link>
         </div>
       </div>
     </div>
