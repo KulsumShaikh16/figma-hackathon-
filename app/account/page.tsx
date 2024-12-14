@@ -14,8 +14,8 @@ const page = () => {
       <Header bgColor="#FFFFFF"/>
     </div>
       {/* ACCOUNT HERO */}
-
-      <div className='w-screen bg-[url(/shop.svg)] bg-cover bg-no-repeat bg-center object-fill h-auto lg:h-[316px]  lg:py-10 py-6 px-8 flex flex-col justify-center items-center gap-4'>
+        {/* Banner Section */}
+        <div className='w-screen bg-[url(/shop.svg)] bg-cover bg-no-repeat bg-center object-fill h-auto lg:h-[316px]  lg:py-10 py-6 px-8 flex flex-col justify-center items-center gap-4'>
 <Image
 src="/Meubel House_Logos-05.svg"
 alt="logo"
@@ -31,6 +31,8 @@ height={77}
 
 </div>
 
+
+      
  {/* Content Section */}
  <div className="mt-8 grid gap-8 mx-4 lg:mx-32 lg:grid-cols-2">
     {/* Login Section */}

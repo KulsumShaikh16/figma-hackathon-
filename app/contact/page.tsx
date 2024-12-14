@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { IoLocationSharp } from 'react-icons/io5'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { BsFillClockFill } from 'react-icons/bs'
+import { IoIosArrowForward } from "react-icons/io";
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -19,40 +20,36 @@ function Contact() {
             
     
             {/* Banner Section */}
-            <div className="relative text-[#000000]">
-                <Image
-                    src="/shop.svg" 
-                    alt="Shop Banner"
-                    height={400}
-                    width={1600}
-                    className="w-full h-[200px] md:h-auto object-cover"
-                />
-                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl md:text-5xl font-semibold ">
-                    Contact
-                </h1>
-                {/* Breadcrumb Section */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-14">
-                    <p className=" text-[#9F9F9F] text-xs md:text-xl flex items-center">
-                        <Link href="/" className="font-bold hover:underline text-[#000000]">Home</Link>
-                        <span className="font-bold mx-2 text-[#000000]">{'>'}</span>
-                        <Link href="/shop" className=" hover:underline">Contact</Link>
-                    </p>
-                </div>
-            </div>
+            <div className='w-screen bg-[url(/shop.svg)] bg-cover bg-no-repeat bg-center object-fill h-auto lg:h-[316px]  lg:py-10 py-6 px-8 flex flex-col justify-center items-center gap-4'>
+<Image
+src="/Meubel House_Logos-05.svg"
+alt="logo"
+width={77}
+height={77}
+
+/>
+<h1 className='text-[48px]  text-center text-[#000000] font-medium '>Contact</h1>
+<div className='flex'><Link href="/home" className='text-[16px] font-medium'>Home</Link>
+<IoIosArrowForward  className='text-[20px]'/>
+<Link href="/account" className='text-[16px] font-medium'>Contact</Link></div>
+
+
+</div>
+
 
            {/* Contact Info Section */}
 <section className="mt-16 text-center px-4 md:px-32">
     <h2 className="text-3xl font-bold">Get In Touch With Us</h2>
-    <p className="mt-4 text-lg  text-[#9F9F9F]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempora libero aut, reiciendis, harum laboriosam quis minus quas maxime delectus sint dolores repudiandae, voluptate rerum nemo non corporis esse aspernatur?</p>
+    <p className="mt-4 text-lg  text-[#9F9F9F]">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
 </section>
 
-<div className="flex flex-col md:flex-row justify-between mt-12 gap-12 md:gap-16">
+<div className="flex flex-col md:flex-row justify-between mt-12 gap-12 md:gap-16 ">
     {/* Contact Details */}
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 ">
         <div className="flex items-center space-x-4 my-6">
             <div>
-                <span className='flex'>
-                    <IoLocationSharp size={25} className="text-4xl text-primary" />
+                <span className='flex '>
+                    <IoLocationSharp size={25} className="text-4xl text-primary " />
                     <h3 className="font-semibold text-xl ml-4">Address</h3>
                 </span>
                 <p className='ml-10'>

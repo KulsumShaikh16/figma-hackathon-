@@ -33,7 +33,7 @@ function Blog() {
                             Home
                         </Link>
                         <span className="font-bold mx-2">{'>'}</span>
-                        <Link href="/blog" className="hover:underline">
+                        <Link href="/blog" className="hover:underline text-[16px] font-[300] text-[#000000]">
                             Blog
                         </Link>
                     </div>

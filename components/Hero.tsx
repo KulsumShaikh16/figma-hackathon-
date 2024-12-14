@@ -12,7 +12,7 @@ const Hero = () => {
 
       <section className="bg-[#FBEBB5] body-font pt-24 lg:pt-0 flex">
         <div className="container mx-auto lg:flex-row lg:justify-center flex flex-col items-center px-5 lg:first-letter:py-24 lg:py-0 gap-6 my-auto">
-          <h1 className="sm:text-4xl lg:text-[64px] p-8 tracking-[4px] font-medium text-[#000000] font-poppins text-center lg:text-start">
+          <h1 className="text-[64px] p-8 tracking-[4px] font-medium text-[#000000] font-poppins text-center lg:text-start">
             Rocket single 
             <span className="block  mt-3" />
             seater <span/>

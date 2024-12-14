@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Shopcta from '@/components/Shopcta'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { IoIosArrowForward } from "react-icons/io";
 
 function CheackOut() {
     return (
@@ -16,26 +17,22 @@ function CheackOut() {
             
 
             {/* Banner Section */}
-            <div className="relative text-black">
-                <Image
-                    src="/shop.svg" 
-                    alt="Shop Banner"
-                    height={400}
-                    width={1600}
-                    className="w-full h-[200px] md:h-auto object-cover"
-                />
-                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl md:text-5xl font-semibold">
-                    Checkout
-                </h1>
-                {/* Breadcrumb Section */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-14">
-                    <p className="text-gray-700 text-xs md:text-xl flex items-center">
-                        <Link href="/" className="font-bold hover:underline">Home</Link>
-                        <span className="font-bold mx-2">{'>'}</span>
-                        <Link href="/shop" className="hover:underline">Checkout</Link>
-                    </p>
-                </div>
-            </div>
+            <div className='w-screen bg-[url(/shop.svg)] bg-cover bg-no-repeat bg-center object-fill h-auto lg:h-[316px]  lg:py-10 py-6 px-8 flex flex-col justify-center items-center gap-4'>
+<Image
+src="/Meubel House_Logos-05.svg"
+alt="logo"
+width={77}
+height={77}
+
+/>
+<h1 className='text-[48px]  text-center text-[#000000] font-medium '>Checkout</h1>
+<div className='flex'><Link href="/home" className='text-[16px] font-medium'>Home</Link>
+<IoIosArrowForward  className='text-[20px]'/>
+<Link href="/account" className='text-[16px] font-medium'>Checkout</Link></div>
+
+
+</div>
+
 
             {/* Billing Section */}
 <div className="flex flex-col lg:flex-row mx-10 gap-6 mt-8">
