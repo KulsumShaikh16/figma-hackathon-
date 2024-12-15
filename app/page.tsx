@@ -4,6 +4,7 @@ import Toppick from '../components/Toppick'
 import Newarrivals from '../components/Newarrivals'
 import Blogs from '../components/Blogs'
 import Insta from '@/components/insta'
+import Footer from '@/components/Footer'
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <Newarrivals />
     <Blogs />
     <Insta />
+    <Footer />
 
 
     </div>

@@ -5,6 +5,7 @@ import Gallery from '@/components/Gallery'
 import Shopcta from '@/components/Shopcta'
 import Filter from '@/components/Filter'
 import Buttonpg from '@/components/Buttonpg'
+import Footer from '@/components/Footer'
 
 const Shop = () => {
   return (
@@ -15,6 +16,7 @@ const Shop = () => {
       <Gallery />
       <Buttonpg />
       <Shopcta />
+      <Footer />
       
     </div>
   )

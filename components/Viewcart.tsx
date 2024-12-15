@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image"
 import Link from "next/link"
 import Shopcta from './Shopcta'
+import Footer from './Footer'
 
 const Viewcart = () => {
   return (
@@ -103,6 +104,7 @@ const Viewcart = () => {
             </div>
             <div className='my-10'>
                 <Shopcta />
+                <Footer />
             </div> 
     </div>
   )
