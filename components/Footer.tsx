@@ -7,14 +7,14 @@ const Footer = () => {
     {/* Footer Content */}
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-screen-xl mx-auto">
       {/* Address Section */}
-      <div className='m-auto'>
+      <div className='text-center lg:text-start'>
         
         <p className="text-gray-600">400 University Drive Suite 200 Coral</p>
         <p className="text-gray-600">Gables, FL 33134 USA</p>
       </div>
 
       {/* Links Section */}
-      <div>
+      <div className='text-center'>
         <h3 className="text-lg text-gray-500 font-semibold mb-4">Links</h3>
         <ul className="space-y-8 text-lg">
           <li className=''>
@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
 
       {/* Help Section */}
-      <div>
+      <div className='text-center'>
         <h3 className="text-lg text-gray-500 font-semibold mb-4">Help</h3>
         <ul className="space-y-8 text-lg">
           <li>
@@ -63,15 +63,15 @@ const Footer = () => {
       </div>
 
       {/* Newsletter Section */}
-      <div>
+      <div className='text-center'>
 <h3 className="text-lg text-gray-500 font-semibold mb-4">Newsletter</h3>
-<div className="flex flex-wrap md:flex-nowrap gap-2">
+<div className="flex flex-wrap md:flex-nowrap gap-2  ">
   <input
     type="email"
     placeholder="Enter Your Email Address"
     className="font-medium flex-1 px-4 py-2 bg-gray-100 border-b-2 border-black focus:ring-2 focus:ring-black focus:outline-none"
   />
-  <button className="px-6 py-2 font-medium  text-black border-b-2 border-black hover:no-underline">
+  <button className="px-6 py-2 font-medium  text-black border-b-2 border-black hover:no-underline ">
     Subscribe
   </button>
 </div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
     {/* Footer Bottom */}
     <hr className="my-6 border-gray-300" />
-    <p className="sm:text-center text-gray-600 lg:text-left lg:pl-4">2022 Meubel House. All rights reserved.</p>
+    <p className="text-center text-gray-600 lg:text-left lg:pl-4">2022 Meubel House. All rights reserved.</p>
   </div>
 );
 }

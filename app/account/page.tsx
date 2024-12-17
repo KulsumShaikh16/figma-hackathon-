@@ -36,8 +36,8 @@ height={77}
  {/* Content Section */}
  <div className="mt-8 grid gap-8 mx-4 lg:mx-32 lg:grid-cols-2">
     {/* Login Section */}
-    <div className="p-4 rounded">
-        <h2 className="text-[36px] font-[600] my-8">Log In</h2>
+    <div className="lg:p-4 rounded">
+        <h2 className="lg:text-[36px] text-[24px] font-[600] my-8">Log In</h2>
         <div className='flex flex-col'>
             <label className="my-2 text-[#000000] text-[16px] mb-2 font-[500]" htmlFor="username">
                 Username or email address

@@ -3,7 +3,7 @@ import React from 'react'
 const Insta = () => {
   return (
     <div>
-    <div className='w-screen bg-[url(/insta-bg.svg)] bg-cover bg-no-repeat bg-center h-auto lg:h-[450px]  lg:py-10 py-6 px-8 mt-6 flex flex-col justify-center items-center gap-4'>
+    <div className='w-screen bg-[url(/insta-bg.svg)] bg-cover bg-no-repeat bg-center h-auto lg:h-[450px]  lg:py-6 py-4 px-8 mt-6 flex flex-col justify-center items-center gap-4'>
 
       <h1 className='text-6xl  text-center text-[#000000] font-bold '>Our Instagram</h1>
       <p className='text-[20px] text-center lg:w-[297px]'>Follow our store on Instagram</p>

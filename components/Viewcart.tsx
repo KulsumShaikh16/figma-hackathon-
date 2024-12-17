@@ -64,9 +64,7 @@ const Viewcart = () => {
                     <input type="number" value="1" className="w-12 text-xs md:text-lg text-center border md:p-2 rounded-md" />
                 </td>
                 <td className="py-4 text-left text-[#000000] text-base md:text-sm ">Rs: 250,000.00</td>
-                {/* <td className="py-4 text-center">
-                    <RiDeleteBin6Line className="hidden lg:table-cell text-red-600 ml-4 cursor-pointer hover:text-red-800" size={20} />
-                </td> */}
+               
             </tr>
         </tbody>
     </table>

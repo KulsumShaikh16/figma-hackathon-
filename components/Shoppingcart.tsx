@@ -18,7 +18,7 @@ function ShoppingCart() {
             {/* Cart Icon */}
             <button
                 onClick={toggleCart}
-                className='flex text-[28px] text-[#000000] absolute right-0 top-0 -mt-4 '
+                className='flex text-[27px] text-[#000000] absolute right-0 top-0 -mt-4 '
                 aria-label="Toggle Shopping Cart"
             >
                 <AiOutlineShoppingCart aria-label="Shopping Cart"  />

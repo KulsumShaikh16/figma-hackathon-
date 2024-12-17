@@ -8,12 +8,12 @@ const Blogs = () => {
   return (
     <div>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto bg-[#FFFFFF]">
+        <div className="container px-5 py-14 mx-auto bg-[#FFFFFF]">
           <div className="flex flex-col text-center w-full ">
             <h2 className="text-[36px] text-[#000000] title-font font-medium title-font mb-1">
               Our Blogs
             </h2>
-            <p className="sm:text-[14px] text-[16px] font-medium  mb-4 text-[#9F9F9F]">
+            <p className="sm:text-[14px] text-[16px] font-medium  text-[#9F9F9F]">
               Find a bright ideal to suit your taste with our great selection
             </p>
           </div>
