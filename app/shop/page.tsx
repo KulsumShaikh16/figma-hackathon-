@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '@/components/Header'
 import Shophero from '@/components/shophero'
-import Gallery from '@/components/Gallery'
+import ProductListing from '@/components/ProductListing'
 import Shopcta from '@/components/Shopcta'
 import Filter from '@/components/Filter'
 import Buttonpg from '@/components/Buttonpg'
@@ -13,7 +13,7 @@ const Shop = () => {
       <Header bgColor="#FFFFFF"/>
       <Shophero />
       <Filter />
-      <Gallery />
+      <ProductListing />
       <Buttonpg />
       <Shopcta />
       <Footer />

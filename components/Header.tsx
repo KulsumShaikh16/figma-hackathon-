@@ -54,7 +54,7 @@ function Header({ bgColor = "#FBEBB5" }) {
                 </nav>
 
                 {/* Icons */}
-                <div className="flex gap-3 md:space-x-8 md:mr-32 items-center">
+                <div className="flex gap-3 md:space-x-8 md:mr-32 md:ml-20 items-center">
                     <Link href='/myaccount'>
                         <FaRegUser aria-label="User Profile" size={20} />
                     </Link>
