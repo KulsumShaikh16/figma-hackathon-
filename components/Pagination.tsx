@@ -26,7 +26,8 @@
 // export default Page
 
 
-import React from "react";
+
+import React, { useState } from "react";
 
 interface PaginationProps {
   totalPages: number;
