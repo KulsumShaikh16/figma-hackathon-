@@ -8,9 +8,9 @@ const Viewcart = () => {
   return (
     <div
        className="max-w-screen-2xl container mx-auto pb-8 px-4">
-            <div className='bg-[#faf4f4]'>
+            <div className='bg-[#faf4f4]'></div>
                 
-            </div>
+            
             {/* Banner Section */}
             <div className="relative text-black">
                 <Image
@@ -90,9 +90,9 @@ const Viewcart = () => {
                             <tr>
                                 <td colSpan={2} className="py-4">
                                     <Link href="/checkout">
-                                    <button className="w-full px-6 py-3 border border-[#000000] text-[20px] rounded-xl" >
-                                        Checkout
-                                    </button>
+                                        <button className="w-full px-6 py-3 border border-[#000000] text-[20px] rounded-xl">
+                                            Checkout
+                                        </button>
                                     </Link>
                                 </td>
                             </tr>

@@ -394,7 +394,8 @@ import { client } from "@/sanity/lib/sanityClient";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; // Import Wishlist hook
+import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io"; // Import icons
 
 interface Product {
   _id: string;
@@ -429,6 +430,7 @@ export default function ProductPage({ params }: ProductPageProps) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1); // Quantity state
+ // const { wishlist, toggleWishlist } = useWishlist(); // Access wishlist and toggleWishlist
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -523,7 +525,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   ${product.price}
                 </span>
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  ${discountedPrice}
+                ${discountedPrice}
                 </span>
                 <button
                   onClick={addToCart}
@@ -532,6 +534,23 @@ export default function ProductPage({ params }: ProductPageProps) {
                   Add to Cart
                 </button>
               </div>
+              {/* <div className="flex gap-3 mt-6">
+                <button
+                  onClick={() => toggleWishlist(product._id)}
+                  className="flex items-center text-red-500"
+                >
+                  {wishlist.includes(product._id) ? (
+                    <IoMdHeart size={30} />
+                  ) : (
+                    <IoMdHeartEmpty size={30} />
+                  )}
+                  <span className="ml-2">
+                    {wishlist.includes(product._id)
+                      ? "Remove from Wishlist"
+                      : "Add to Wishlist"}
+                  </span>
+                </button>
+              </div> */}
             </div>
           </div>
         </div>

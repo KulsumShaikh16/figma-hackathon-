@@ -5,7 +5,7 @@ import { FaCalendar, FaUserLarge } from 'react-icons/fa6';
 import { IoIosArrowForward } from "react-icons/io";
 import { GiWoodenChair } from 'react-icons/gi';
 import Header from '@/components/Header';
-import Page from '@/components/Buttonpg'
+import Page from '@/components/Pagination'
 import Shopcta from '@/components/Shopcta';
 import Footer from '@/components/Footer'
 
