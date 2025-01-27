@@ -479,7 +479,17 @@ export default function ProductPage({ params }: ProductPageProps) {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return
+    
+     <div>
+      <Image 
+      src="https://i.gifer.com/ZKZg.gif"
+      alt="loading"
+      width={100}
+      height={100}/>
+
+    </div>
+    
   }
 
   if (!product) {

@@ -26,63 +26,76 @@
 // export default Page
 
 
-"use client";
-
 import React from "react";
 
 interface PaginationProps {
-  currentPage: number;
   totalPages: number;
+  currentPage: number;
   onPageChange: (page: number) => void;
 }
 
-function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
+const Pagination: React.FC<PaginationProps> = ({
+  totalPages,
+  currentPage,
+  onPageChange,
+}) => {
   const handleNext = () => {
-    if (currentPage < totalPages) onPageChange(currentPage + 1);
+    if (currentPage < totalPages) {
+      onPageChange(currentPage + 1);
+    }
   };
 
-  const handlePrev = () => {
-    if (currentPage > 1) onPageChange(currentPage - 1);
+  const handlePrevious = () => {
+    if (currentPage > 1) {
+      onPageChange(currentPage - 1);
+    }
   };
 
   return (
-    <div className="flex justify-center items-center mt-14">
-      <div className="flex gap-4 mx-auto align-middle justify-center items-center">
-        {/* Previous Button */}
-        <div
-          className={`${
-            currentPage === 1 ? "bg-gray-300" : "bg-[#fff9e5]"
-          } px-4 py-2 rounded-md cursor-pointer`}
-          onClick={handlePrev}
-        >
-          Prev
-        </div>
+    <div className="flex items-center justify-center gap-4 my-4">
+      {/* Previous Button */}
+      <div
+        className={`${
+          currentPage === 1 ? "bg-gray-300 cursor-not-allowed" : "bg-[#fff9e5]"
+        } px-4 py-2 rounded-md cursor-pointer`}
+        onClick={handlePrevious}
+        role="button"
+        aria-label="Previous Page"
+        tabIndex={currentPage === 1 ? -1 : 0}
+      >
+        Previous
+      </div>
 
-        {/* Page Numbers */}
-        {[...Array(totalPages)].map((_, index) => (
-          <div
-            key={index}
-            className={`${
-              currentPage === index + 1 ? "bg-[#fbebb5]" : "bg-[#fff9e5]"
-            } px-4 py-2 rounded-md cursor-pointer`}
-            onClick={() => onPageChange(index + 1)}
-          >
-            {index + 1}
-          </div>
-        ))}
-
-        {/* Next Button */}
+      {/* Page Numbers */}
+      {[...Array(totalPages)].map((_, index) => (
         <div
+          key={index}
           className={`${
-            currentPage === totalPages ? "bg-gray-300" : "bg-[#fff9e5]"
+            currentPage === index + 1 ? "bg-[#fbebb5]" : "bg-[#fff9e5]"
           } px-4 py-2 rounded-md cursor-pointer`}
-          onClick={handleNext}
+          onClick={() => onPageChange(index + 1)}
+          role="button"
+          aria-label={`Go to page ${index + 1}`}
+          tabIndex={0}
         >
-          Next
+          {index + 1}
         </div>
+      ))}
+
+      {/* Next Button */}
+      <div
+        className={`${
+          currentPage === totalPages ? "bg-gray-300 cursor-not-allowed" : "bg-[#fff9e5]"
+        } px-4 py-2 rounded-md cursor-pointer`}
+        onClick={handleNext}
+        role="button"
+        aria-label="Next Page"
+        tabIndex={currentPage === totalPages ? -1 : 0}
+      >
+        Next
       </div>
     </div>
   );
-}
+};
 
 export default Pagination;
