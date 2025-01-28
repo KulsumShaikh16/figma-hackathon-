@@ -27,18 +27,18 @@
 
 
 
-import React, { useState } from "react";
+import React from "react";
 
 interface PaginationProps {
-  totalPages: number;
-  currentPage: number;
-  onPageChange: (page: number) => void;
+  totalPages: number; // Total number of pages
+  currentPage: number; // Current active page
+  onPageChange: (page: number) => void; // Callback for page changes
 }
 
 const Pagination: React.FC<PaginationProps> = ({
-  totalPages,
-  currentPage,
-  onPageChange,
+  totalPages = 5, // Default value for totalPages
+  currentPage = 1, // Default value for currentPage
+  onPageChange, // Function to handle page change
 }) => {
   const handleNext = () => {
     if (currentPage < totalPages) {

@@ -127,7 +127,11 @@ height={77}
 
 
             <div className='justify-center mx-auto text-center'>
-            <Page />
+            <Page 
+                totalPages={10} 
+                currentPage={1} 
+                onPageChange={(page) => console.log(`Page changed to ${page}`)} 
+            />
                 
                 <Shopcta />
                 <Footer />
