@@ -25,22 +25,21 @@
 
 // export default Page
 
-"use client"
+"use client";
 
-
-import { useState } from 'react';
 import React from "react";
 
 interface PaginationProps {
-  totalPages: number; // Total number of pages
-  currentPage: number; // Current active page
-  onPageChange: (page: number) => void; // Callback for page changes
+  totalPages: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
 }
 
+// Pagination Component
 const Pagination: React.FC<PaginationProps> = ({
-  totalPages = 5, // Default value for totalPages
-  currentPage = 1, // Default value for currentPage
-  onPageChange, // Function to handle page change
+  totalPages = 5,
+  currentPage = 1,
+  onPageChange,
 }) => {
   const handleNext = () => {
     if (currentPage < totalPages) {
@@ -88,7 +87,9 @@ const Pagination: React.FC<PaginationProps> = ({
       {/* Next Button */}
       <div
         className={`${
-          currentPage === totalPages ? "bg-gray-300 cursor-not-allowed" : "bg-[#fff9e5]"
+          currentPage === totalPages
+            ? "bg-gray-300 cursor-not-allowed"
+            : "bg-[#fff9e5]"
         } px-4 py-2 rounded-md cursor-pointer`}
         onClick={handleNext}
         role="button"
@@ -102,3 +103,4 @@ const Pagination: React.FC<PaginationProps> = ({
 };
 
 export default Pagination;
+
