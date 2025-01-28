@@ -25,6 +25,7 @@
 
 // export default Page
 
+"use client"
 
 
 import { useState } from 'react';
