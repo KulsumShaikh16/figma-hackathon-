@@ -69,20 +69,22 @@ const Pagination: React.FC<PaginationProps> = ({
       </div>
 
       {/* Page Numbers */}
-      {[...Array(totalPages)].map((_, index) => (
-        <div
-          key={index}
-          className={`${
-            currentPage === index + 1 ? "bg-[#fbebb5]" : "bg-[#fff9e5]"
-          } px-4 py-2 rounded-md cursor-pointer`}
-          onClick={() => onPageChange(index + 1)}
-          role="button"
-          aria-label={`Go to page ${index + 1}`}
-          tabIndex={0}
-        >
-          {index + 1}
-        </div>
-      ))}
+      {totalPages > 0 &&
+  [...Array(totalPages)].map((_, index) => (
+    <div
+      key={index}
+      className={`${
+        currentPage === index + 1 ? "bg-[#fbebb5]" : "bg-[#fff9e5]"
+      } px-4 py-2 rounded-md cursor-pointer`}
+      onClick={() => onPageChange(index + 1)}
+      role="button"
+      aria-label={`Go to page ${index + 1}`}
+      tabIndex={0}
+    >
+      {index + 1}
+    </div>
+  ))}
+
 
       {/* Next Button */}
       <div
