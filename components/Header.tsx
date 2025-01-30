@@ -256,20 +256,20 @@ function Header({ bgColor = "#FBEBB5" }) {
                     </button>
 
                     {/* Logo */}
-                    <div className="flex justify-center flex-1 md:flex-none">
+                    <div className="flex justify-center flex-1 md:flex-none mt-[-4px]">
                         <Link href="/">
                             <Image
                                 src="/logo-removebg-preview.png"
                                 alt="Cozynest"
-                                width={120}
-                                height={120}
+                                width={100}
+                                height={60}
                                 className="mx-auto"
                             />
                         </Link>
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex flex-1 justify-center space-x-10 font-medium">
+                    <nav className="hidden md:flex flex-1 justify-center space-x-10 font-medium m-[-4px]">
                         <Link href="/" className="hover:underline">Home</Link>
                         <Link href="/shop" className="hover:underline">Shop</Link>
                         <Link href="/blog" className="hover:underline">Blog</Link>

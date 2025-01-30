@@ -1,8 +1,8 @@
-//import S from '@sanity/desk-tool/structure-builder';
-import StructureResolver from '@sanity/desk-tool/structure-builder';
+import S from '@sanity/desk-tool/structure-builder';
+import type { StructureResolver } from 'sanity/desk';
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
-export const structure = (S: any) =>
+export const structure: StructureResolver = () =>
   S.list()
     .title('Content')
     .items(S.documentTypeListItems());
