@@ -20,6 +20,7 @@
     "@sanity/client": "^6.27.2",
     "@sanity/components": "^2.14.0",
     "@sanity/core": "^2.36.2",
+    "@sanity/desk-tool": "^2.36.2",
     "@sanity/vision": "^3.72.1",
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
