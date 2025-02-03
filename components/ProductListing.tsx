@@ -23,7 +23,7 @@ const ProductListing = () => {
   const [view, setView] = useState("grid"); // State to track view type
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
-
+console.log(products)
   useEffect(() => {
     const fetchProducts = async () => {
       const data = await client.fetch(`

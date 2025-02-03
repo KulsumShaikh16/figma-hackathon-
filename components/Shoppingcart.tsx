@@ -102,7 +102,13 @@ import { RiShoppingBag4Line } from "react-icons/ri";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
+interface CartItem {
+  id: string;
+  name: string;
+  imageUrl: string;
+  discountedPrice: number;
+  quantity: number;
+}
 function ShoppingCart() {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -134,14 +140,14 @@ function ShoppingCart() {
   }, [isCartVisible]);
 
   const removeItem = (id: string) => {
-    const updatedCart = cartItems.filter((item: any) => item.id !== id);
+    const updatedCart = cartItems.filter((item:CartItem) => item.id !== id);
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   const calculateSubtotal = () => {
     return cartItems.reduce(
-      (acc: number, item: any) => acc + item.discountedPrice * item.quantity,
+      (acc: number, item: CartItem) => acc + item.discountedPrice * item.quantity,
       0
     );
   };
@@ -168,7 +174,7 @@ function ShoppingCart() {
 
             <div className="space-y-4 mt-10">
               {cartItems.length > 0 ? (
-                cartItems.map((item: any) => (
+                cartItems.map((item: CartItem) => (
                   <div
                     key={item.id}
                     className="flex justify-between items-center"

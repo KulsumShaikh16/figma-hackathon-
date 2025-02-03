@@ -7,10 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+
+interface CartItem {
+  id: string;
+  name: string;
+  discountedPrice: number;
+  quantity: number;
+}
+
 function ShoppingCart() {
   const [isCartVisible, setIsCartVisible] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
-  const [isMounted, setIsMounted] = useState(false); // To check if the component is mounted
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [isMounted, setIsMounted] = useState(false);
 
   const toggleCart = () => {
     setIsCartVisible(!isCartVisible);
@@ -19,33 +27,34 @@ function ShoppingCart() {
   const router = useRouter();
 
   const handleCheckout = () => {
-    if (!isMounted) return; // Ensure the component is mounted
+    if (!isMounted) return;
 
-    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const cart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
     if (cart.length === 0) {
       alert("Your cart is empty!");
       return;
     }
 
-    // Navigate to Checkout page
     router.push("/checkout");
   };
 
   useEffect(() => {
-    setIsMounted(true); // Ensure the component is mounted
-    const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+    setIsMounted(true);
+    const storedCart: CartItem[] = JSON.parse(
+      localStorage.getItem("cart") || "[]"
+    );
     setCartItems(storedCart);
   }, [isCartVisible]);
 
   const removeItem = (id: string) => {
-    const updatedCart = cartItems.filter((item: any) => item.id !== id);
+    const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   const calculateSubtotal = () => {
     return cartItems.reduce(
-      (acc: number, item: any) => acc + item.discountedPrice * item.quantity,
+      (acc: number, item) => acc + item.discountedPrice * item.quantity,
       0
     );
   };

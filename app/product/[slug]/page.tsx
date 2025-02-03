@@ -395,7 +395,6 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState, useEffect,use } from "react"; // Import Wishlist hook
-import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io"; // Import icons
 
 interface Product {
   _id: string;
