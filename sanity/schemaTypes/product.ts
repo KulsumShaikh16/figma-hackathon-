@@ -14,11 +14,11 @@ const productSchema ={
         type: 'string',
       },
       {
-        name: 'image', // Image field change here
+        name: 'image',
         title: 'Image',
-        type: 'image', // Correct type to handle image references
+        type: 'image', 
         options: {
-          hotspot: true, // Enable image cropping for better control
+          hotspot: true, 
         },
       },
       {

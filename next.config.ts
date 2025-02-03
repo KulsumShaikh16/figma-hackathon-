@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+// next.config.js
+const nextConfig = {
+  webpack: (config: any, { isServer }: { isServer: boolean }) => {
+    // Add a rule to handle the `part:` scheme
+    config.module.rules.push({
+      test: /part:@sanity.*/,
+      use: 'null-loader',
+    });
 
-const nextConfig: NextConfig = {
-  /* config options here */
+    return config;
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
