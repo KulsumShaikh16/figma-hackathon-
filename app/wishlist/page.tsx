@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 interface CartItem {
   id: string;
   name: string;
+  imageUrl: string;
   discountedPrice: number;
   quantity: number;
 }
@@ -81,7 +82,7 @@ function ShoppingCart() {
 
             <div className="space-y-4 mt-10">
               {cartItems.length > 0 ? (
-                cartItems.map((item: any) => (
+                cartItems.map((item: CartItem) => (
                   <div
                     key={item.id}
                     className="flex justify-between items-center"
