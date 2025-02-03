@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { client } from "@/sanity/lib/sanityClient";
+import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import Filter from "./Filter";
@@ -10,6 +10,13 @@ import Pagination from "./Pagination";
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { FaCartShopping } from "react-icons/fa6";
 
+interface Product1 {
+  _id: string;
+  name: string;
+  slug: string;
+  price: number;
+  imageUrl: string;
+}
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -64,7 +71,7 @@ const ProductListing = () => {
           }`}
         >
           
-          {paginatedProducts.map((item: any) => (
+          {paginatedProducts.map((item:Product1) => (
             <div
               key={item._id}
               className={`${

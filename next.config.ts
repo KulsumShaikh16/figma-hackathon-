@@ -1,14 +1,16 @@
-// next.config.js
-const nextConfig = {
-  webpack: (config: any, { isServer }: { isServer: boolean }) => {
-    // Add a rule to handle the `part:` scheme
-    config.module.rules.push({
-      test: /part:@sanity.*/,
-      use: 'null-loader',
-    });
+import type { NextConfig } from "next";
 
-    return config;
-  },
+const nextConfig :NextConfig = {
+  images:{
+    remotePatterns:[
+        {
+            hostname:"cdn.sanity.io"
+        }
+    ]
+}
+
+  /* config options here */
 };
 
-module.exports = nextConfig;
+
+export default nextConfig;

@@ -390,11 +390,11 @@
 "use client";
 
 import { groq } from "next-sanity";
-import { client } from "@/sanity/lib/sanityClient";
+import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState, useEffect } from "react"; // Import Wishlist hook
+import { useState, useEffect,use } from "react"; // Import Wishlist hook
 import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io"; // Import icons
 
 interface Product {
@@ -407,9 +407,9 @@ interface Product {
   imageUrl: string;
 }
 
-interface ProductPageProps {
-  params: { slug: string };
-}
+// interface ProductPageProps {
+//   params: { slug: string };
+// }
 
 async function getProduct(slug: string): Promise<Product> {
   return client.fetch(
@@ -426,16 +426,19 @@ async function getProduct(slug: string): Promise<Product> {
   );
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
+interface ProductPageProps {
+  params: Promise<{ slug: string }>;
+}
+export default function ProductPage({ params }: ProductPageProps ) {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1); // Quantity state
  // const { wishlist, toggleWishlist } = useWishlist(); // Access wishlist and toggleWishlist
-
+const Params = use(params)
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const productData = await getProduct(params.slug);
+        const productData = await getProduct(Params.slug);
         setProduct(productData);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -446,7 +449,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     };
 
     fetchProduct();
-  }, [params.slug]);
+  }, [Params.slug]);
 
   const addToCart = () => {
     if (!product) return;
@@ -464,7 +467,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 
     // Save to local storage
     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
-    const existingItemIndex = cart.findIndex((item: any) => item.id === product._id);
+    const existingItemIndex = cart.findIndex((item: Product) => item._id === product._id);
 
     if (existingItemIndex > -1) {
       // Update quantity if item already exists
