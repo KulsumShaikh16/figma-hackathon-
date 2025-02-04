@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React from "react";
@@ -10,7 +8,6 @@ interface PaginationProps {
   onPageChange: (page: number) => void;
 }
 
-// Pagination Component
 const Pagination: React.FC<PaginationProps> = ({
   totalPages = 5,
   currentPage = 1,
@@ -31,53 +28,47 @@ const Pagination: React.FC<PaginationProps> = ({
   return (
     <div className="flex items-center justify-center gap-4 my-4">
       {/* Previous Button */}
-      <div
+      <button
         className={`${
           currentPage === 1 ? "bg-gray-300 cursor-not-allowed" : "bg-[#fff9e5]"
-        } px-4 py-2 rounded-md cursor-pointer`}
+        } px-4 py-2 rounded-md`}
         onClick={handlePrevious}
-        role="button"
+        disabled={currentPage === 1}
         aria-label="Previous Page"
-        tabIndex={currentPage === 1 ? -1 : 0}
       >
         Previous
-      </div>
+      </button>
 
       {/* Page Numbers */}
       {totalPages > 0 &&
-  [...Array(totalPages)].map((_, index) => (
-    <div
-      key={index}
-      className={`${
-        currentPage === index + 1 ? "bg-[#fbebb5]" : "bg-[#fff9e5]"
-      } px-4 py-2 rounded-md cursor-pointer`}
-      onClick={() => onPageChange(index + 1)}
-      role="button"
-      aria-label={`Go to page ${index + 1}`}
-      tabIndex={0}
-    >
-      {index + 1}
-    </div>
-  ))}
-
+        [...Array(totalPages)].map((_, index) => (
+          <button
+            key={index}
+            className={`${
+              currentPage === index + 1 ? "bg-[#fbebb5]" : "bg-[#fff9e5]"
+            } px-4 py-2 rounded-md`}
+            onClick={() => onPageChange(index + 1)}
+            aria-label={`Go to page ${index + 1}`}
+          >
+            {index + 1}
+          </button>
+        ))}
 
       {/* Next Button */}
-      <div
+      <button
         className={`${
           currentPage === totalPages
             ? "bg-gray-300 cursor-not-allowed"
             : "bg-[#fff9e5]"
-        } px-4 py-2 rounded-md cursor-pointer`}
+        } px-4 py-2 rounded-md`}
         onClick={handleNext}
-        role="button"
+        disabled={currentPage === totalPages}
         aria-label="Next Page"
-        tabIndex={currentPage === totalPages ? -1 : 0}
       >
         Next
-      </div>
+      </button>
     </div>
   );
 };
 
 export default Pagination;
-
