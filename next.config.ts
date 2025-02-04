@@ -8,8 +8,13 @@ const nextConfig :NextConfig = {
         }
     ]
 }
+const { clerk } = require('@clerk/nextjs');
 
-  /* config options here */
+clerk({
+  publishableKey: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+});
+
+  
 };
 
 
