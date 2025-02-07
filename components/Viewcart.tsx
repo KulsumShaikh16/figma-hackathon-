@@ -109,7 +109,3 @@ const Viewcart = () => {
 }
 
 export default Viewcart
-
-
-
-

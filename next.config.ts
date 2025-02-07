@@ -4,7 +4,10 @@ const nextConfig :NextConfig = {
   images:{
     remotePatterns:[
         {
-            hostname:"cdn.sanity.io"
+            hostname: "cdn.sanity.io"
+        },
+        {
+            hostname: "source.unsplash.com"
         }
     ]
 }
