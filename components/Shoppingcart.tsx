@@ -130,12 +130,13 @@ function ShoppingCart() {
                   View Cart
                 </button>
               </Link>
-              <button
+             <button
                 onClick={handleCheckout}
                 className="rounded-full text-[#000000] text-[12px] hover:text-white bg-white hover:bg-gray-800 px-8 py-2 border border-black"
               >
                 Checkout
-              </button>
+              </button> 
+
             </div>
           </div>
         </div>
